@@ -1,16 +1,16 @@
 import { useState } from 'react'
 
 
-function Register() {
+function Login() {
 
 
 	const [name, setName] = useState('')
 	const [password, setPassword] = useState('')
 
-	async function registerUser(event) {
+	async function loginUser(event) {
 		event.preventDefault()
 
-		const response = await fetch('http://localhost:4000/api/register', {
+		const response = await fetch('http://localhost:4000/api/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -28,8 +28,8 @@ function Register() {
 
 	return (
 		<div className='m-9 '>
-			<h1 className='m -bottom-4'>Register</h1>
-			<form onSubmit={registerUser}>
+			<h1 className='m -bottom-4'>Login</h1>
+			<form onSubmit={loginUser}>
 				<input
 					value={name}
 					onChange={(e) => setName(e.target.value)}
@@ -48,10 +48,10 @@ function Register() {
 					className='m-top-4'
 				/>
 				<br />
-				<input className='outline-btn m-top-5' type="submit" value="Register" /><a className='m-left-6' href='http://localhost:3000/login'>Already a User</a>
+				<input  className='outline-btn m-top-5' type="submit" value="Login" />
 			</form>
 		</div>
 	)
 }
 
-export default Register
+export default Login
