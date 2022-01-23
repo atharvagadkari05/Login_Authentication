@@ -1,2 +1,2 @@
 # Login_Authentication
-Login Auth using NodeJS, ExpressJS, and MongoDB.
+Login Auth using NodeJS, ExpressJS, MongoDB and JWTs.
